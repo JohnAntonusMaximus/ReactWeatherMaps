@@ -17,6 +17,13 @@ module.exports = {
     }]
   },
   resolve: {
+    root: __dirname,
+    alias: {
+      searchbar: 'src/containers/searchbar.js',
+      weatherList: 'src/containers/weatherList.js',
+      sparkline: 'src/components/SparkLine.js',
+      map: 'src/components/map.js'
+    },
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
