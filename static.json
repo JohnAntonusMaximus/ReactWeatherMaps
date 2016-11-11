@@ -1,1 +1,5 @@
-{ "root": "build/" }
+{
+  "root": "src",
+  "clean_urls": false,
+  "error_page": "src/error/error.html"
+}
