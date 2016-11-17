@@ -1,13 +1,6 @@
-const path = require('path')
-const express = require('express')
+const express = require('express');
+const app = express();
 
-module.exports = {
-  app: function () {
-    const app = express()
-    const indexPath = express.static(path.join(__dirname, '/index.html'))
-
-    app.get('/', function (_, res) { res.sendFile(indexPath) })
-
-    return app
-  }
-}
+const PORT = process.env.PORT || 3000;
+app.use(express.static(__dirname + '/public'));
+app.listen(PORT, () => console.log(`express app listening on port: ${PORT}`));
